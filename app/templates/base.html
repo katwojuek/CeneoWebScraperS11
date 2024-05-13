@@ -7,28 +7,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
-    <title>Ceneo.pl Web Scraper</title>
+    <title>Ceneo Scraper</title>
 </head>
 <body>
     <header class="container text-center">
-        <h1 class="display-1">Ceneo.pl Web Scraper</h1>
+        <h1 class="display-1">Ceneo Scraper</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark container">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-house-fill"></i> Main page</a>
+                        <a class="nav-link" href="{{ url_for('index') }}"><i class="bi bi-house-fill"></i> Strona główna</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-cloud-download-fill"></i>
-Extract opinions</a>
+                        <a class="nav-link" href="{{ url_for('extract') }}"><i class="bi bi-cloud-download-fill"></i>
+Ekstrakcja opinii</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-list-stars"></i> List of products</a>
+                        <a class="nav-link" href="{{ url_for('products') }}"><i class="bi bi-list-stars"></i> Lista produktów</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><i class="bi bi-person-circle"></i> About author</a>
+                        <a class="nav-link" href="{{ url_for('about') }}"><i class="bi bi-person-circle"></i> O autorze</a>
                     </li>
                 </ul>
             </div>
